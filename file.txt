@@ -1,0 +1,34 @@
+DeepFinanceFFNN/
+├── CMakeLists.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+├── include/
+│   └── DeepFinanceFFNN/
+│       ├── NeuralNetwork.h
+│       ├── Layer.h
+│       ├── CPU/
+│       │   ├── NeuralNetworkCPU.h
+│       │   └── LayerCPU.h
+│       └── GPU/
+│           ├── NeuralNetworkGPU.h
+│           └── LayerGPU.h
+├── src/
+│   ├── NeuralNetwork.cpp
+│   ├── Layer.cpp
+│   ├── CPU/
+│   │   ├── NeuralNetworkCPU.cpp
+│   │   └── LayerCPU.cpp
+│   └── GPU/
+│       ├── NeuralNetworkGPU.cpp
+│       └── LayerGPU.cpp
+├── tests/
+│   └── test_neural_network.cpp
+├── examples/
+│   └── main.cpp
+├── data/
+│   └── sample_financial_data.csv
+├── third_party/
+│   └── Eigen/ (for linear algebra)
+└── gpu_support/
+    └── CUDA/ (optional CUDA-related files and utilities)
