@@ -1,34 +1,118 @@
-DeepFinanceFFNN/
+DeepFinanceDL/
 ├── CMakeLists.txt
 ├── README.md
 ├── LICENSE
 ├── .gitignore
 ├── include/
-│   └── DeepFinanceFFNN/
-│       ├── NeuralNetwork.h
-│       ├── Layer.h
-│       ├── CPU/
-│       │   ├── NeuralNetworkCPU.h
-│       │   └── LayerCPU.h
-│       └── GPU/
-│           ├── NeuralNetworkGPU.h
-│           └── LayerGPU.h
+│   └── DeepFinanceDL/
+│       ├── core/
+│       │   ├── tensor.h
+│       │   ├── graph.h
+│       │   ├── autograd.h
+│       │   └── session.h
+│       ├── layers/
+│       │   ├── layer.h
+│       │   ├── dense.h
+│       │   └── lstm.h
+│       ├── activations/
+│       │   ├── activation.h
+│       │   ├── relu.h
+│       │   └── sigmoid.h
+│       ├── optimizers/
+│       │   ├── optimizer.h
+│       │   ├── sgd.h
+│       │   └── adam.h
+│       ├── propagation/
+│       │   ├── forward.h
+│       │   └── backward.h
+│       ├── datasets/
+│       │   ├── dataset.h
+│       │   └── financial_dataset.h
+│       ├── models/
+│       │   ├── model.h
+│       │   └── feedforward.h
+│       ├── utils/
+│       │   ├── logger.h
+│       │   ├── config.h
+│       │   └── data_preprocessor.h
+│       └── gpu/
+│           ├── tensor_gpu.h
+│           ├── layers_gpu.h
+│           ├── activations_gpu.h
+│           ├── optimizers_gpu.h
+│           └── gpu_utils.h
 ├── src/
-│   ├── NeuralNetwork.cpp
-│   ├── Layer.cpp
-│   ├── CPU/
-│   │   ├── NeuralNetworkCPU.cpp
-│   │   └── LayerCPU.cpp
-│   └── GPU/
-│       ├── NeuralNetworkGPU.cpp
-│       └── LayerGPU.cpp
+│   └── DeepFinanceDL/
+│       ├── core/
+│       │   ├── tensor.cpp
+│       │   ├── graph.cpp
+│       │   ├── autograd.cpp
+│       │   └── session.cpp
+│       ├── layers/
+│       │   ├── layer.cpp
+│       │   ├── dense.cpp
+│       │   └── lstm.cpp
+│       ├── activations/
+│       │   ├── activation.cpp
+│       │   ├── relu.cpp
+│       │   └── sigmoid.cpp
+│       ├── optimizers/
+│       │   ├── optimizer.cpp
+│       │   ├── sgd.cpp
+│       │   └── adam.cpp
+│       ├── propagation/
+│       │   ├── forward.cpp
+│       │   └── backward.cpp
+│       ├── datasets/
+│       │   ├── dataset.cpp
+│       │   └── financial_dataset.cpp
+│       ├── models/
+│       │   ├── model.cpp
+│       │   └── feedforward.cpp
+│       ├── utils/
+│       │   ├── logger.cpp
+│       │   ├── config.cpp
+│       │   └── data_preprocessor.cpp
+│       └── gpu/
+│           ├── tensor_gpu.cpp
+│           ├── layers_gpu.cpp
+│           ├── activations_gpu.cpp
+│           ├── optimizers_gpu.cpp
+│           └── gpu_utils.cpp
 ├── tests/
-│   └── test_neural_network.cpp
+│   ├── CMakeLists.txt
+│   ├── core/
+│   │   └── test_tensor.cpp
+│   ├── layers/
+│   │   └── test_dense.cpp
+│   ├── activations/
+│   │   └── test_relu.cpp
+│   ├── optimizers/
+│   │   └── test_sgd.cpp
+│   ├── propagation/
+│   │   └── test_backward.cpp
+│   ├── models/
+│   │   └── test_feedforward.cpp
+│   └── utils/
+│       └── test_logger.cpp
 ├── examples/
-│   └── main.cpp
+│   ├── CMakeLists.txt
+│   ├── simple_feedforward.cpp
+│   ├── lstm_financial.cpp
+│   └── gpu_example.cpp
+├── scripts/
+│   ├── preprocess_data.py
+│   └── build.sh
 ├── data/
 │   └── sample_financial_data.csv
 ├── third_party/
-│   └── Eigen/ (for linear algebra)
-└── gpu_support/
-    └── CUDA/ (optional CUDA-related files and utilities)
+│   ├── Eigen/         # For linear algebra operations
+│   └── other_dependencies/
+└── docs/
+    ├── index.md
+    ├── installation.md
+    ├── usage.md
+    ├── API_reference.md
+    └── tutorials/
+        ├── training_a_model.md
+        └── gpu_acceleration.md
