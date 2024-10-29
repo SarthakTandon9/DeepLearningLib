@@ -7,24 +7,15 @@ DeepFinanceDL/
 │   └── DeepFinanceDL/
 │       ├── core/
 │       │   ├── tensor.h
-│       │   ├── graph.h
-│       │   ├── autograd.h
-│       │   └── session.h
 │       ├── layers/
 │       │   ├── layer.h
 │       │   ├── dense.h
-│       │   └── lstm.h
 │       ├── activations/
 │       │   ├── activation.h
 │       │   ├── relu.h
-│       │   └── sigmoid.h
 │       ├── optimizers/
 │       │   ├── optimizer.h
 │       │   ├── sgd.h
-│       │   └── adam.h
-│       ├── propagation/
-│       │   ├── forward.h
-│       │   └── backward.h
 │       ├── datasets/
 │       │   ├── dataset.h
 │       │   └── financial_dataset.h
@@ -35,7 +26,7 @@ DeepFinanceDL/
 │       │   ├── logger.h
 │       │   ├── config.h
 │       │   └── data_preprocessor.h
-│       └── gpu/
+│       └── gpu/                 # Placeholder for future GPU implementations
 │           ├── tensor_gpu.h
 │           ├── layers_gpu.h
 │           ├── activations_gpu.h
@@ -44,25 +35,16 @@ DeepFinanceDL/
 ├── src/
 │   └── DeepFinanceDL/
 │       ├── core/
-│       │   ├── tensor.cpp
-│       │   ├── graph.cpp
-│       │   ├── autograd.cpp
-│       │   └── session.cpp
+│       │   └── tensor.cpp
 │       ├── layers/
 │       │   ├── layer.cpp
-│       │   ├── dense.cpp
-│       │   └── lstm.cpp
+│       │   └── dense.cpp
 │       ├── activations/
 │       │   ├── activation.cpp
-│       │   ├── relu.cpp
-│       │   └── sigmoid.cpp
+│       │   └── relu.cpp
 │       ├── optimizers/
 │       │   ├── optimizer.cpp
-│       │   ├── sgd.cpp
-│       │   └── adam.cpp
-│       ├── propagation/
-│       │   ├── forward.cpp
-│       │   └── backward.cpp
+│       │   └── sgd.cpp
 │       ├── datasets/
 │       │   ├── dataset.cpp
 │       │   └── financial_dataset.cpp
@@ -73,7 +55,7 @@ DeepFinanceDL/
 │       │   ├── logger.cpp
 │       │   ├── config.cpp
 │       │   └── data_preprocessor.cpp
-│       └── gpu/
+│       └── gpu/                 # Placeholder for future GPU implementations
 │           ├── tensor_gpu.cpp
 │           ├── layers_gpu.cpp
 │           ├── activations_gpu.cpp
@@ -89,8 +71,6 @@ DeepFinanceDL/
 │   │   └── test_relu.cpp
 │   ├── optimizers/
 │   │   └── test_sgd.cpp
-│   ├── propagation/
-│   │   └── test_backward.cpp
 │   ├── models/
 │   │   └── test_feedforward.cpp
 │   └── utils/
@@ -98,8 +78,6 @@ DeepFinanceDL/
 ├── examples/
 │   ├── CMakeLists.txt
 │   ├── simple_feedforward.cpp
-│   ├── lstm_financial.cpp
-│   └── gpu_example.cpp
 ├── scripts/
 │   ├── preprocess_data.py
 │   └── build.sh
