@@ -9,7 +9,7 @@ namespace Layers {
 
 class Dense : public Layer {
 public:
-    Dense(int input_size, int output_size, std::shared_ptr<Activations::Activation> activation);
+    Dense(int input_size, int output_size, std::shared_ptr<Activations::Activation> activation = nullptr);
     ~Dense() override {}
 
     Eigen::MatrixXd forward(const Eigen::MatrixXd& input) override;

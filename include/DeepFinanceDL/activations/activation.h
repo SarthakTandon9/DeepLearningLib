@@ -5,7 +5,7 @@
 
 namespace DeepFinanceDL
 {
-    namespace Avtivations
+    namespace Activations
     {
         class Activation
         {
